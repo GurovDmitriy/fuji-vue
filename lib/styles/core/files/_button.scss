@@ -1,0 +1,54 @@
+$f-button-size-padding: (
+  "xxs": 6px 8px,
+  "xs": 8px 10px,
+  "s": 10px 12px,
+  "m": 12px 14px,
+  "l": 14px 16px,
+  "xl": 16px 18px,
+  "xxl": 18px 20px,
+);
+$f-button-size-radius: (
+  "xxs": 4px,
+  "xs": 4px,
+  "s": 4px,
+  "m": 4px,
+  "l": 6px,
+  "xl": 6px,
+  "xxl": 6px,
+);
+$f-button-size-border-width: (
+  "xxs": 1px,
+  "xs": 1px,
+  "s": 1px,
+  "m": 1px,
+  "l": 1px,
+  "xl": 2px,
+  "xxl": 2px,
+);
+$f-button-size-icon-space: (
+  "xxs": 4px,
+  "xs": 4px,
+  "s": 4px,
+  "m": 6px,
+  "l": 8px,
+  "xl": 10px,
+  "xxl": 10px,
+);
+
+.f-button {
+  @each $key, $value in $f-button-size-padding {
+    --f-button-size-#{$key}-padding: #{$value};
+  }
+
+  @each $key, $value in $f-button-size-radius {
+    --f-button-size-#{$key}-radius: #{$value};
+  }
+
+  @each $key, $value in $f-button-size-border-width {
+    --f-button-size-#{$key}-border-width: #{$value};
+  }
+
+  @each $key, $value in $f-button-size-icon-space {
+    --f-button-size-#{$key}-icon-space: #{$value};
+  }
+}

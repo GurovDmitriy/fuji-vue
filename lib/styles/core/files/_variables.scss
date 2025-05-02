@@ -1,0 +1,57 @@
+$f-default: (
+  "color-text": #000000,
+  "transition": 0.2s,
+
+  "opacity-loading": 0.6,
+  "opacity-hover": 0.8,
+  "opacity-active": 0.6,
+  "opacity-disabled": 0.4,
+
+  "cursor-hover": pointer,
+  "cursor-disabled": not-allowed,
+);
+$f-color: (
+  "default": transparent,
+  "primary": #e07ebe,
+  "secondary": #d3d3d3,
+  "error": #ff4d4f,
+  "info": #1677ff,
+  "warning": #faad14,
+  "sucess": #52c41a,
+);
+$f-color-text-color: (
+  "default": #000000,
+  "primary": #ffffff,
+  "secondary": #000000,
+  "error": #ffffff,
+  "info": #ffffff,
+  "warning": #ffffff,
+  "sucess": #ffffff,
+);
+$f-radius: (
+  "xxs": 2px,
+  "xs": 3px,
+  "s": 4px,
+  "m": 5px,
+  "l": 10px,
+  "xl": 24px,
+  "xxl": 30px,
+);
+
+:root {
+  @each $key, $value in $f-default {
+    --f-default-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $f-color {
+    --f-color-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $f-color-text-color {
+    --f-color-#{$key}-text-color: #{$value};
+  }
+
+  @each $key, $value in $f-radius {
+    --f-radius-#{$key}: #{$value};
+  }
+}

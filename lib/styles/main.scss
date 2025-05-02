@@ -1,0 +1,17 @@
+@use "reset";
+@use "core" as *;
+@use "sass:map";
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
