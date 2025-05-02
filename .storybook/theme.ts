@@ -3,6 +3,6 @@ import { create } from "@storybook/theming"
 export default create({
   base: "dark",
   brandTitle: "Fuji Vue",
-  brandUrl: "https://example.com",
+  brandUrl: "https://github.com/GurovDmitriy/fuji-vue",
   brandTarget: "_self",
 })
