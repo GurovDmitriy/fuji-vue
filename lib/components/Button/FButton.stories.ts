@@ -59,7 +59,7 @@ export const Icon: Story = {
   },
 }
 
-export const IconSlotLoading: Story = {
+export const IconFromSlot: Story = {
   render: (args) => ({
     components: { FButton: FButton, FConfigProvider, FIconLoadingLine },
     setup() {
@@ -84,7 +84,7 @@ export const IconSlotLoading: Story = {
   },
 }
 
-export const IconConfigLoading: Story = {
+export const IconFromConfig: Story = {
   render: (args) => ({
     components: { FButton: FButton, FConfigProvider, FIconLoading },
     setup() {
@@ -104,28 +104,6 @@ export const IconConfigLoading: Story = {
     size: "m",
     color: "primary",
     status: "loading",
-    iconPosition: "left",
-  },
-}
-
-export const Link: Story = {
-  render: (args) => ({
-    components: { FButton: FButton, FConfigProvider },
-    setup() {
-      return { args }
-    },
-    template: `
-      <FConfigProvider>
-        <FButton v-bind="args" as="a">button</FButton>
-      </FConfigProvider>
-    `,
-  }),
-
-  args: {
-    type: "solid",
-    size: "m",
-    color: "primary",
-    status: "default",
     iconPosition: "left",
   },
 }
