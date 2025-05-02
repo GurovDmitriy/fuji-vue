@@ -1,0 +1,103 @@
+{
+  "name": "fuji-vue",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "module": "dist/lib/esm/index.js",
+  "types": "dist/types/lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/types/lib/index.d.ts"
+      },
+      "default": {
+        "import": "./dist/lib/esm/index.js"
+      }
+    },
+    "./style.css": "./dist/lib/esm/index.css"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "storybook build",
+    "build:package": "npm run type-check && npm run build:only",
+    "build:only": "vite build",
+    "storybook": "storybook dev -p 6006",
+    "storybook:preview": "npx http-server storybook-static",
+    "dev": "vite",
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "type-check": "vue-tsc --build",
+    "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
+    "lint:eslint": "eslint . --fix",
+    "lint:prettier": "prettier --write \"**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts,css,scss,less,md,json}\" --ignore-path .prettierignore",
+    "lint:stylelint": "stylelint --fix \"**/*.{vue,css,less,scss,html}\" --ignore-path .stylelintignore",
+    "analyze:treemap": "npx vite-bundle-visualizer",
+    "analyze:sunburst": "npx vite-bundle-visualizer --template=sunburst",
+    "husky": "npx husky",
+    "update": "ncu --interactive --format group"
+  },
+  "dependencies": {
+    "animejs": "^3.2.2",
+    "motion-v": "^1.0.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.3",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-links": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/test": "^8.4.7",
+    "@storybook/vue3": "^8.4.7",
+    "@storybook/vue3-vite": "^8.4.7",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/animejs": "^3.1.12",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.10.2",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "@vitest/eslint-plugin": "1.1.20",
+    "@vue/eslint-config-prettier": "^10.1.0",
+    "@vue/eslint-config-typescript": "^14.1.4",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.7.0",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.32.0",
+    "husky": "^9.1.7",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.4.2",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "sass": "^1.83.0",
+    "storybook": "^8.4.7",
+    "stylelint": "^16.12.0",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-rational-order-fix": "^0.1.9",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-order": "^6.0.4",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.18.2",
+    "vite": "^6.0.5",
+    "vite-plugin-dts": "^4.4.0",
+    "vite-plugin-vue-devtools": "^7.6.8",
+    "vitest": "^2.1.8",
+    "vue-tsc": "^2.2.0"
+  },
+  "volta": {
+    "node": "22.12.0"
+  },
+  "engines": {
+    "node": ">= 22"
+  }
+}
