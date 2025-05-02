@@ -23,13 +23,13 @@
     "dist"
   ],
   "scripts": {
+    "dev": "storybook dev -p 6006",
+    "dev:vite": "vite",
     "build": "storybook build",
     "build:package": "npm run type-check && npm run build:only",
     "build:only": "vite build",
-    "storybook": "storybook dev -p 6006",
-    "storybook:preview": "npx http-server storybook-static",
-    "dev": "vite",
-    "preview": "vite preview",
+    "preview:storybook": "npx http-server storybook-static",
+    "preview:vite": "vite preview",
     "test": "vitest --run",
     "type-check": "vue-tsc --build",
     "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
