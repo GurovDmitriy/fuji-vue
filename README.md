@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://brainfuljs.dev">
+<a href="https://gurovdmitriy.github.io/fuji-vue/">
 <img src="https://github.com/GurovDmitriy/fuji-vue/raw/main/art/fuji-logo.svg" height="150">
 </a>
 </p>
